@@ -15,6 +15,7 @@ class Category(models.Model):
 class News(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     title = models.CharField(max_length=225)
+    tags = models.CharField(max_length=225)
     summary = models.TextField()
     content = models.TextField()
     image = models.ImageField(upload_to="blogs/featured_images")
